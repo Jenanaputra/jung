@@ -1,4 +1,21 @@
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif; /* Default font */
+}
+
 /* Base styles for the navigation menu */
+nav {
+    width: 100%; /* Full width of the nav bar */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    padding: 20px 0; /* Adjust padding */
+    position: fixed; /* Fix at the top */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Keep the nav bar on top */
+}
+
 nav ul {
     display: flex;
     justify-content: space-between; /* Space out left and center content */
@@ -6,7 +23,6 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 100%; /* Full width of the nav bar */
 }
 
 nav ul .left {
@@ -16,7 +32,7 @@ nav ul .left {
 nav ul .center {
     display: flex;
     justify-content: center; /* Center the menu items */
-    flex-grow: 1; /* Make the center section grow to take up the available space */
+    flex-grow: 1; /* Make the center section grow */
 }
 
 nav ul li {
@@ -25,30 +41,69 @@ nav ul li {
 
 nav ul .left a {
     font-family: 'Arial', sans-serif;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
+    text-decoration: none;
+    color: #333; /* Text color */
 }
 
 nav ul li a {
-    font-family: 'Helvetica', sans-serif;
-    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
     text-decoration: none;
-    color: #333;
+    color: #333; /* Text color */
 }
 
-/* Make the layout the same on desktop and mobile */
+/* Styling for the main content with a shared background */
+.content {
+    display: flex;
+    flex-direction: row; /* Keep text side by side with space for the background */
+    height: calc(100vh - 80px); /* Full viewport height minus nav bar height */
+    margin-top: 80px; /* Start below the nav bar */
+    background-image: url('/images/BB.jpeg'); /* Unified background image */
+    background-size: cover; /* Ensure the image covers the entire content area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+}
+
+/* Styling for the text section */
+.text-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white; /* White text for contrast */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better readability */
+    z-index: 1; /* Ensure this section is above the background */
+}
+
+/* Remove separate image section (not needed) */
+.image-section {
+    display: none;
+}
+
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: row; /* Keep menu items in a row */
-        justify-content: space-between; /* Space out the left and center items */
+        flex-direction: row;
+        justify-content: space-between;
     }
-    
+
     nav ul .center {
-        flex-grow: 1; /* Allow the center part to grow */
-        justify-content: center; /* Keep the center items aligned */
+        flex-grow: 1;
+        justify-content: center;
     }
 
     nav ul li {
-        margin: 0 10px; /* Maintain the same spacing on mobile */
+        margin: 0 10px;
+    }
+
+    .content {
+        flex-direction: column; /* Stack the sections vertically */
+    }
+
+    .text-section {
+        background-color: rgba(0, 0, 0, 0.7); /* Stronger overlay for smaller screens */
     }
 }
