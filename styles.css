@@ -57,7 +57,7 @@ nav ul li a {
     flex-direction: row; /* Keep text side by side with space for the background */
     height: calc(100vh - 80px); /* Full viewport height minus nav bar height */
     margin-top: 80px; /* Start below the nav bar */
-    background-image: url('/images/BB.jpeg'); /* Unified background image */
+    background-image: url('images/BB.jpeg');
     background-size: cover; /* Ensure the image covers the entire content area */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repetition */
