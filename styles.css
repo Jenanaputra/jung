@@ -51,14 +51,14 @@ nav ul li a {
     color: #333; /* Text color */
 }
 
-/* Styling for the main content with a shared background */
+/* Main content with background */
 .content {
     display: flex;
-    flex-direction: row; /* Keep text side by side with space for the background */
-    height: calc(100vh - 80px); /* Full viewport height minus nav bar height */
-    margin-top: 80px; /* Start below the nav bar */
-    background-image: url('images/BB.jpeg');
-    background-size: cover; /* Ensure the image covers the entire content area */
+    flex-direction: row; /* Keep content in a row for larger screens */
+    height: calc(100vh - 80px); /* Full viewport height minus the navbar */
+    margin-top: 80px; /* Ensure it starts below the fixed navbar */
+    background-image: url('images/BB.jpeg'); /* Background image */
+    background-size: cover; /* Default: cover entire container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repetition */
 }
@@ -88,5 +88,21 @@ nav ul li a {
 
     .text-section {
         background-color: rgba(0, 0, 0, 0.7); /* Stronger overlay for smaller screens */
+    }
+}
+
+/* Responsive styles for background image */
+@media (max-width: 1024px) {
+    .content {
+        background-size: contain; /* Ensure the image fits within smaller screens */
+        background-position: top; /* Adjust positioning for better visibility */
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack text content vertically */
+        background-size: cover; /* Revert to cover for smaller mobile screens */
+        background-position: center; /* Keep the focus centered */
     }
 }
