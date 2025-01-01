@@ -18,7 +18,7 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: space-between; /* Space out left and center content */
+    justify-content: space-between; /* Space out left and right sections */
     align-items: center; /* Vertically align items */
     list-style-type: none;
     padding: 0;
@@ -26,22 +26,19 @@ nav ul {
 }
 
 nav ul .left {
-    margin-left: 10px; /* Keep "Jenana Putra" near the left edge */
+    margin-left: 20px; /* Add some spacing from the left */
 }
 
-nav ul .center {
-    display: flex;
-    justify-content: center; /* Center the menu items */
-    flex-grow: 1; /* Make the center section grow */
+nav ul .right {
+    display: flex; /* Group right-side items in a row */
+    gap: 20px; /* Space between the right-side items */
+    margin-right: 20px; /* Add some spacing from the right */
 }
 
-nav ul li {
-    margin: 0 10px; /* Spacing between menu items */
-}
-
+/* Styling for "Jenana Putra" */
 nav ul .left a {
     font-family: 'Arial', sans-serif;
-    font-size: 28px;
+    font-size: 32px; /* Adjust this to your preferred size */
     font-weight: bold;
     text-decoration: none;
     color: #333; /* Text color */
@@ -78,25 +75,11 @@ nav ul li a {
     z-index: 1; /* Ensure this section is above the background */
 }
 
-/* Remove separate image section (not needed) */
-.image-section {
-    display: none;
-}
-
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    nav ul .center {
-        flex-grow: 1;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 10px;
     }
 
     .content {
