@@ -54,13 +54,14 @@ nav ul li a {
 /* Main content with background */
 .content {
     display: flex;
-    flex-direction: row; /* Keep content in a row for larger screens */
-    height: calc(100vh - 80px); /* Full viewport height minus the navbar */
-    margin-top: 80px; /* Ensure it starts below the fixed navbar */
-    background-image: url('images/BB.jpeg'); /* Background image */
-    background-size: cover; /* Default: cover entire container */
+    flex-direction: column; /* Default to column for stacking */
+    height: calc(100vh - 80px); /* Full viewport height minus navbar */
+    margin-top: 80px; /* Below the fixed navbar */
+    background-image: url('images/BB.jpeg');
+    background-size: cover; /* Cover entire container */
     background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repetition */
+    background-repeat: no-repeat; /* Prevent repeats */
+    overflow: hidden; /* Prevent extra content from causing layout issues */
 }
 
 /* Styling for the text section */
@@ -91,18 +92,11 @@ nav ul li a {
     }
 }
 
-/* Responsive styles for background image */
-@media (max-width: 1024px) {
-    .content {
-        background-size: contain; /* Ensure the image fits within smaller screens */
-        background-position: top; /* Adjust positioning for better visibility */
-    }
-}
-
+/* Mobile-specific styles */
 @media (max-width: 768px) {
     .content {
-        flex-direction: column; /* Stack text content vertically */
-        background-size: cover; /* Revert to cover for smaller mobile screens */
-        background-position: center; /* Keep the focus centered */
+        flex-direction: column; /* Stack items vertically */
+        background-size: cover; /* Ensure full coverage */
+        background-position: center; /* Keep image centered */
     }
 }
