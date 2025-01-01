@@ -1,26 +1,54 @@
-/* styles.css */
-
+/* Base styles for the navigation menu */
 nav ul {
     display: flex;
+    justify-content: space-between; /* Space out left and center content */
     align-items: center; /* Vertically align items */
-    justify-content: center; /* Center the main navigation items */
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 100%; /* Ensure the full width of the nav bar */
-    position: relative; /* Allow precise positioning of items */
+    width: 100%; /* Full width of the nav bar */
 }
 
 nav ul .left {
-    position: absolute; /* Position "Jenana Putra" independently */
-    left: 500px; /* Move slightly to the left */
+    margin-left: 10px; /* Keep "Jenana Putra" near the left edge */
+}
+
+nav ul .center {
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    flex-grow: 1; /* Make the center section grow to take up the available space */
 }
 
 nav ul li {
-    margin: 0 10px; /* Spacing between center items */
+    margin: 0 10px; /* Spacing between menu items */
 }
 
-a {
+nav ul .left a {
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
     text-decoration: none;
-    color: #333; /* Example: Dark gray color */
+    color: #333;
+}
+
+/* Make the layout the same on desktop and mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Keep menu items in a row */
+        justify-content: space-between; /* Space out the left and center items */
+    }
+    
+    nav ul .center {
+        flex-grow: 1; /* Allow the center part to grow */
+        justify-content: center; /* Keep the center items aligned */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Maintain the same spacing on mobile */
+    }
 }
