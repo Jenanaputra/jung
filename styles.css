@@ -51,30 +51,29 @@ nav ul li a {
     color: #333; /* Text color */
 }
 
-/* Main content with background */
+
 .content {
-    display: flex;
-    flex-direction: column; /* Default to column for stacking */
-    height: calc(100vh - 80px); /* Full viewport height minus navbar */
-    margin-top: 80px; /* Below the fixed navbar */
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin-top: 0; /* Remove margin caused by the navbar */
     background-image: url('images/BB.jpeg');
     background-size: cover; /* Cover entire container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeats */
-    overflow: hidden; /* Prevent extra content from causing layout issues */
 }
 
-/* Styling for the text section */
 .text-section {
-    flex: 1;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack the text elements vertically */
+    justify-content: center; /* Ensure text aligns vertically in its container */
+    align-items: center; /* Center text horizontally */
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     color: white; /* White text for contrast */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better readability */
-    z-index: 1; /* Ensure this section is above the background */
+    text-align: center; /* Center align text */
 }
+
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
