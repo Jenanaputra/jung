@@ -51,6 +51,10 @@ nav ul li a {
     color: #333; /* Text color */
 }
 
+/* Increase font size for the menu items in the right section */
+nav ul .right li a {
+    font-size: 20px; /* Increase the font size as desired */
+}
 
 .content {
     display: flex; /* Enable flexbox for centering */
@@ -98,4 +102,70 @@ nav ul li a {
         background-size: cover; /* Ensure full coverage */
         background-position: center; /* Keep image centered */
     }
+}
+
+.section {
+    height: 100vh; /* Full viewport height for each section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#about {
+    background-color: #f9f9f9; /* Keep the background color */
+    color: #333; /* Text color */
+    display: flex; /* Enable flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center align the text */
+    padding: 100px 20px; /* Add top padding to prevent overlap with the navbar */
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Include padding in height */
+}
+
+
+#project {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+#contact {
+    background-image: url('images/view.jpeg'); /* Path to your background image */
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333; /* Text color */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+.large-font {
+    font-size: 24px; /* Adjust the size as needed */
+}
+
+/* Circle Image Style */
+.circle-image {
+    width: 20vw; /* Relative width (20% of the viewport width) */
+    height: 20vw; /* Relative height to maintain the aspect ratio */
+    max-width: 255px; /* Maximum width to avoid it becoming too large on bigger screens */
+    max-height: 255px; /* Maximum height */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 10px; /* Space between the image and caption */
+}
+
+/* Ensure the caption looks consistent */
+figcaption {
+    font-size: 1.5rem; /* Relative font size */
+    color: #333; /* Text color */
+    font-style: italic; /* Optional: make the caption italic */
 }
