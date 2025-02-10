@@ -1,0 +1,103 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+  }
+  
+  .page {
+    height: auto; /* Changed from 100vh */
+    min-height: 100vh; /* Minimum full viewport height */
+    padding: 40px 20px; /* Add breathing room */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  /* Page 1: Profile */
+  #page1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+    text-align: center;
+  }
+  
+  .profile-pic {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  #name {
+    font-size: 2em;
+    color: white;
+  }
+  
+  #job-title {
+    font-style: italic;
+    color: white;
+  }
+  
+ /* About Me Section */
+ #page2 {
+    background-color: white;
+    height: auto; /* Allow natural height */
+    min-height: auto; /* Remove forced 100vh */
+    padding: 50px 20px; /* Vertical spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the contents */
+  }
+  
+  .section-title {
+    text-align: center; /* Center the title horizontally */
+    font-size: 2.5em; /* Adjust title size as needed */
+    margin-bottom: 20px; /* Space between title and content */
+    font-weight: bold;
+  }
+  
+  
+  .about-pic {
+    max-width: 250px; /* Fixed maximum size */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto; /* Vertical spacing */
+  }
+
+  /* Article text in About Me section */
+  #content2 article {
+    font-size: 1.8em; /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height for readability */
+    color: #333; /* Optional: Set a color for the text */
+    margin-top: 20px; /* Optional: Add spacing above the article */
+  }
+  
+  /* Projects/Contact Sections */
+  #page3 {
+    background-color: lightgreen;
+  }
+  
+  #page4 {
+    background-color: lightcoral;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-pic {
+      max-width: 200px; /* Smaller on mobile */
+    }
+    
+    .row {
+      flex-direction: column; /* Stack image/text on mobile */
+    }
+  }
+  
+  .col-sm-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
